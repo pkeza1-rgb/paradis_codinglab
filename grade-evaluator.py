@@ -74,6 +74,9 @@ def evaluate_grades(data):
         total_grade += (assignment['score'] * assignment['weight']) / 100
 
     print(f"Final Grade: {total_grade:.2f}%")
+    gpa = (total_grade / 100) * 5.0
+
+    print(f"GPA: {gpa:.2f}")
     # TODO: d) Determine Pass/Fail status (>= 50% in BOTH categories)
     # TODO: e) Check for failed formative assignments (< 50%)
     #          and determine which one(s) have the highest weight for resubmission.
