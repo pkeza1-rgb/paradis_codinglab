@@ -78,6 +78,26 @@ def evaluate_grades(data):
 
     print(f"GPA: {gpa:.2f}")
     # TODO: d) Determine Pass/Fail status (>= 50% in BOTH categories)
+
+    # Calculate formative and summative scores
+    formative_score = 0
+    summative_score = 0
+
+    for assignment in data:
+        weighted_score = (assignment['score'] * assignment['weight']) / 100
+
+        if assignment['group'] == "Formative":
+            formative_score += weighted_score
+        elif assignment['group'] == "Summative":
+            summative_score += weighted_score
+
+    # Determine pass/fail
+    if formative_score >= 30 and summative_score >= 20:
+        print("Status: PASSED")
+    else:
+        print("Status: FAILED")
+
+
     # TODO: e) Check for failed formative assignments (< 50%)
     #          and determine which one(s) have the highest weight for resubmission.
     # TODO: f) Print the final decision (PASSED / FAILED) and resubmission options
