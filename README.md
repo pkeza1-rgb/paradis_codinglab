@@ -8,12 +8,11 @@ The Python program reads `grades.csv`, validates scores and weights, calculates 
 
 The Bash script automates the archiving of processed grade files by adding timestamps, moving files into an archive folder, creating a new grades file, and logging the operation.
 
-## Files
+### Files
 
-- `grade-evaluator.py` - Python application for grade processing and evaluation.
-- `organizer.sh` - Bash script for grade file archiving.
-- `grades.csv` - Sample grade dataset used for testing.
-## grade-evaluator.py
+- grade-evaluator.py(a python application for grade processing and evaluation).
+- organizer.sh(a bash script for grade file archiving).
+  # grade-evaluator.py
 
 Python program that:
 
@@ -27,7 +26,7 @@ Python program that:
 - Calculates GPA
 - Determines whether the student has passd or failed
 - Finds failed formative assignments with the highest weight for resubmission.
-## organizer.sh
+  ## organizer.sh
 
 Bash script that:
 
@@ -36,9 +35,18 @@ Bash script that:
 - Renames and moves the existing grades.csv file into the archive folder
 - Creates a new empty grades.csv file
 - Records archive actions in organizer.log
+  
+#### Usage Instructions
 
-## How to Run
+# Running the Python Application
 
-### Run Python Program
-Enter the bash command "python3 grade-evaluator.py", then enter "grades.csv" when prompted.Give permission to the archive script by entering "chmod +x organizer.sh" and run it by entering "./organizer.sh".
+-Run the grade evaluator using "python3 grade-evaluator.py" command.
+-When prompted, enter the CSV file name: grades.csv
+
+## Running the Bash Archive Script
+
+-First, give execution permission to the script with "chmod +x organizer.sh" command.
+-Then run the archive script with the "./organizer.sh" command.
+
+
 
