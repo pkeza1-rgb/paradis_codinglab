@@ -37,6 +37,10 @@ def evaluate_grades(data):
     'data' is a list of dictionaries containing the assignment records.
     """
     print("\n--- Processing Grades ---")
+    for assignment in data:
+        if assignment['score'] < 0 or assignment['score'] > 100:
+            print(f"Error: Invalid score {assignment['score']} for {assignment['assignment']}.")
+            return
     
     # TODO: a) Check if all scores are percentage based (0-100)
     # TODO: b) Validate total weights (Total=100, Summative=40, Formative=60)
